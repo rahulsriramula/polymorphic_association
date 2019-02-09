@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if params[:speaker_id].present? %>
+  <%= link_to 'back', speakers_path %>
+<% else %>
+  <%= link_to 'Back', sponsors_path %>
+<% end %> 
